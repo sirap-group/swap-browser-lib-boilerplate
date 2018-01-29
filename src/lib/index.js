@@ -5,9 +5,9 @@ const d = debug('swap-browser-lib-boilerplate')
 d('starting app')
 
 export default class DemoClass {
-  constructor () {
-    this.propA = 'A'
-    this.propB = 'B'
+  constructor (a, b) {
+    this.propA = a
+    this.propB = b
   }
 
   concatenate () {
