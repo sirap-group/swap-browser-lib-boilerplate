@@ -88,23 +88,21 @@ module.exports = function (config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    // browsers: ['ChromeHeadlessCustom'],
-    // browsers: ['ChromeHeadless']
-    // browsers: ['Chrome']
+    // see also for IE for linux on VMs: https://stackoverflow.com/questions/3701484/how-to-test-in-ie-with-linux
     // browsers: ['Chrome', 'ChromeCanary', 'ChromeHeadless', 'Firefox', 'Safari', 'PhantomJS', 'Opera', 'IE'],
-    browsers: ['Chrome', 'ChromeHeadless', 'Firefox', 'PhantomJS'],
+    browsers: ['Chrome', 'ChromeHeadless', 'ChromeHeadlessDocker', 'Firefox', 'PhantomJS'],
 
     // if true, Karma runs tests once and exits
     // singleRun: true,
     singleRun: false,
 
-    // customLaunchers: {
-    //   ChromeHeadlessCustom: {
-    //     base: 'ChromeHeadless',
-    //     flags: [
-    //       '--no-sandbox' // needed to run test cases in docker
-    //     ]
-    //   }
-    // }
+    customLaunchers: {
+      ChromeHeadlessDocker: {
+        base: 'ChromeHeadless',
+        flags: [
+          '--no-sandbox' // needed to run test cases in docker
+        ]
+      }
+    }
   })
 }
