@@ -1,6 +1,6 @@
 import debug from 'debug'
 
-const d = debug('swap-browser-lib-testing')
+const d = debug('swap-browser-lib-boilerplate')
 
 d('starting app')
 

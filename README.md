@@ -1,22 +1,22 @@
 <h1 align="center">
   <a href="https://github.com/sirap-group"><img src="src/assets/img/brand.png"/></a>
   <br>
-  −− swap-browser-lib-testing −−
+  −− swap-browser-lib-boilerplate −−
   <br>
   <br>
 </h1>
 
 <p align="center">
-  <a href="https://travis-ci.org/sirap-group/swap-browser-lib-testing" target="_blank">
-    <img alt="Build Status" src="https://travis-ci.org/sirap-group/swap-browser-lib-testing.svg?branch=master"/>
+  <a href="https://travis-ci.org/sirap-group/swap-browser-lib-boilerplate" target="_blank">
+    <img alt="Build Status" src="https://travis-ci.org/sirap-group/swap-browser-lib-boilerplate.svg?branch=master"/>
   </a>
 
-  <a href="https://www.npmjs.com/package/swap-browser-lib-testing">
-    <img src="https://img.shields.io/npm/dm/swap-browser-lib-testing.svg" alt="npm downloads">
+  <a href="https://www.npmjs.com/package/swap-browser-lib-boilerplate">
+    <img src="https://img.shields.io/npm/dm/swap-browser-lib-boilerplate.svg" alt="npm downloads">
   </a>
 
-  <a href="https://npmjs.org/package/swap-browser-lib-testing" target="_blank">
-    <img alt="NPM version" src="https://badge.fury.io/js/swap-browser-lib-testing.svg"/>
+  <a href="https://npmjs.org/package/swap-browser-lib-boilerplate" target="_blank">
+    <img alt="NPM version" src="https://badge.fury.io/js/swap-browser-lib-boilerplate.svg"/>
   </a>
 
   <a href="https://standardjs.com" target="_blank">
@@ -25,7 +25,7 @@
 </p>
 
 <h4 align="center">
-  −− swap-browser-lib-testing SWAP app −−
+  −− swap-browser-lib-boilerplate SWAP app −−
 </h4>
 
 ## Installation
@@ -33,25 +33,25 @@
 ### Global
 
 ```sh
-$ yarn gobal add swap-browser-lib-testing
+$ yarn gobal add swap-browser-lib-boilerplate
 ```
 
 or
 
 ```sh
-$ npm install --global swap-browser-lib-testing
+$ npm install --global swap-browser-lib-boilerplate
 ```
 
 ### Local
 
 ```sh
-$ yarn add [-D] swap-browser-lib-testing
+$ yarn add [-D] swap-browser-lib-boilerplate
 ```
 
 or
 
 ```sh
-$ npm install --save[-dev] swap-browser-lib-testing
+$ npm install --save[-dev] swap-browser-lib-boilerplate
 ```
 
 ## Usage
@@ -59,13 +59,13 @@ $ npm install --save[-dev] swap-browser-lib-testing
 ### Global
 
 ```sh
-$ swap-browser-lib-testing
+$ swap-browser-lib-boilerplate
 ```
 
 ### Local
 
 ```js
-import swapBrowserLibTesting from 'swap-browser-lib-testing'
+import swapBrowserLibTesting from 'swap-browser-lib-boilerplate'
 swapBrowserLibTesting()
 ```
 
@@ -125,8 +125,8 @@ All the rest of the development dependencies are local.
 Clone the repo and install dependencies:
 
 ```sh
-$ git clone git@github.com:sirap-group/swap-browser-lib-testing.git
-$ cd swap-browser-lib-testing
+$ git clone git@github.com:sirap-group/swap-browser-lib-boilerplate.git
+$ cd swap-browser-lib-boilerplate
 $ yarn install
 ```
 #### Running test

@@ -18,9 +18,9 @@ d('starting')
 let demoObj
 
 /**
- * @test swap-browser-lib-testing
+ * @test swap-browser-lib-boilerplate
  */
-describe('swap-browser-lib-testing', function () {
+describe('swap-browser-lib-boilerplate', function () {
   this.slow(250)
 
   if (isCI || isTravis) {

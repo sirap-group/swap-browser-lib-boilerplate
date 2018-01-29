@@ -1,12 +1,12 @@
 {
-  "name": "swap-browser-lib-testing",
-  "description": "swap-browser-lib-testing SWAP app",
+  "name": "swap-browser-lib-boilerplate",
+  "description": "swap-browser-lib-boilerplate SWAP app",
   "version": "0.1.0",
-  "homepage": "https://github.com/sirap-group/swap-browser-lib-testing",
+  "homepage": "https://github.com/sirap-group/swap-browser-lib-boilerplate",
   "author": "Rémi Becheras (https://github.com/rbecheras)",
-  "repository": "git@github.com:sirap-group/swap-browser-lib-testing.git",
+  "repository": "git@github.com:sirap-group/swap-browser-lib-boilerplate.git",
   "bugs": {
-    "url": "https://github.com/sirap-group/swap-browser-lib-testing/issues"
+    "url": "https://github.com/sirap-group/swap-browser-lib-boilerplate/issues"
   },
   "engines": {
     "node": ">=4"
