@@ -25,7 +25,7 @@
 </p>
 
 <h4 align="center">
-  −− swap-browser-lib-boilerplate SWAP app −−
+  −− This is a boilerplate project for SWAP browser libraries. This project is used as a reference to design the swap-browser-lib generator (generate-swap-browser-lib), a Generate generator. It relies on Yarn, ESNext, StandardJS, ESlint, BabelJS, Yarn Scripts, Webpack, GulpJS, KarmaJS, MochaJS, ChaiJS, SinonJS, UpdateJS and GenerateJS −−
 </h4>
 
 ## Installation

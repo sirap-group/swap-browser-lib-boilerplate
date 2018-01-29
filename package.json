@@ -1,6 +1,6 @@
 {
   "name": "swap-browser-lib-boilerplate",
-  "description": "swap-browser-lib-boilerplate SWAP app",
+  "description": "This is a boilerplate project for SWAP browser libraries. This project is used as a reference to design the swap-browser-lib generator (generate-swap-browser-lib), a Generate generator. It relies on Yarn, ESNext, StandardJS, ESlint, BabelJS, Yarn Scripts, Webpack, GulpJS, KarmaJS, MochaJS, ChaiJS, SinonJS, UpdateJS and GenerateJS",
   "version": "0.1.0",
   "homepage": "https://github.com/sirap-group/swap-browser-lib-boilerplate",
   "author": "Rémi Becheras (https://github.com/rbecheras)",
