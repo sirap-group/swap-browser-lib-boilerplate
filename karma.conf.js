@@ -18,6 +18,8 @@ const karmaMocha = require('karma-mocha')
 const karmaChai = require('karma-chai')
 const karmaSinonChai = require('karma-sinon-chai')
 const karmaChromeLauncher = require('karma-chrome-launcher')
+const karmaFirefoxLauncher = require('karma-firefox-launcher')
+const karmaPhantomLauncher = require('karma-phantomjs-launcher')
 const karmaMochaReporter = require('karma-mocha-reporter')
 const karmaSourceMapLoader = require('karma-sourcemap-loader')
 const karmaCoverage = require('karma-coverage')
@@ -51,6 +53,8 @@ module.exports = function (config) {
       karmaChai,
       karmaSinonChai,
       karmaChromeLauncher,
+      karmaFirefoxLauncher,
+      karmaPhantomLauncher,
       karmaMochaReporter,
       karmaSourceMapLoader,
       karmaCoverage
@@ -64,7 +68,8 @@ module.exports = function (config) {
 
     // prevent console spamming when running in Karma!
     webpackServer: {
-      noInfo: true // prevent console spamming when running in Karma!
+      // noInfo: true // prevent console spamming when running in Karma!
+      noInfo: false // prevent console spamming when running in Karma!
     },
 
     // web server port
@@ -78,17 +83,20 @@ module.exports = function (config) {
     logLevel: config.LOG_INFO,
 
     // toggle whether to watch files and rerun tests upon incurring changes
-    autoWatch: false,
+    // autoWatch: false,
+    autoWatch: true,
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
     // browsers: ['ChromeHeadlessCustom'],
     // browsers: ['ChromeHeadless']
-    browsers: ['Chrome']
-    // browsers: ['Chrome', 'ChromeHeadless']
+    // browsers: ['Chrome']
+    // browsers: ['Chrome', 'ChromeCanary', 'ChromeHeadless', 'Firefox', 'Safari', 'PhantomJS', 'Opera', 'IE'],
+    browsers: ['Chrome', 'ChromeHeadless', 'Firefox', 'PhantomJS'],
 
     // if true, Karma runs tests once and exits
     // singleRun: true,
+    singleRun: false,
 
     // customLaunchers: {
     //   ChromeHeadlessCustom: {
