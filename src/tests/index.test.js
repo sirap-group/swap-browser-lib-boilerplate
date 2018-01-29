@@ -32,7 +32,7 @@ describe('swap-browser-lib-boilerplate', function () {
   }
 
   beforeEach(done => {
-    demoObj = new DemoClass()
+    demoObj = new DemoClass('A', 'B')
     done()
   })
 
