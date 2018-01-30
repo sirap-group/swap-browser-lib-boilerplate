@@ -3,7 +3,7 @@ import 'mocha'
 import chai from 'chai'
 import debug from 'debug'
 
-import DemoClass from '../lib/'
+import DemoClass from '../lib/index'
 
 const expect = chai.expect
 
@@ -101,14 +101,13 @@ describe('swap-browser-lib-boilerplate', function () {
      * @test #toString()
      */
     describe('#toString()', () => {
-      it('should compute a string joining propA and propB with a -', done => {
+      it('should compute a string joining propA and propB with a +', done => {
         let ret = demoObj.toString()
         expect(ret).to.be.a('string')
         expect(ret).to.equal('A-B')
         done()
       })
     })
-
   })
 })
 

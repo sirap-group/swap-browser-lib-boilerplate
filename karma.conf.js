@@ -36,10 +36,6 @@ module.exports = function (config) {
     frameworks: ['mocha', 'chai', 'sinon-chai'],
 
     // list of files/patterns to load in the browser
-    // files: [{ pattern: 'spec.bundle.js', watched: false }],
-    // files: [
-    //   'dist/index.js'
-    // ],
     files: [
       'src/**/*.js'
     ],

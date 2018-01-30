@@ -8,14 +8,17 @@ module.exports = {
   },
   devtool: 'source-map',
   target: 'web',
+
   node: {
     fs: 'empty'
   },
+
   module: {
     rules: [
       {
         test: /\.js$/,
         exclude: /(node_modules)/,
+
         use: {
           loader: 'babel-loader',
           options: {
