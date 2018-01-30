@@ -13,6 +13,10 @@ export default class DemoClass {
   concatenate () {
     return this.propA + this.propB
   }
+
+  toString () {
+    return `${this.propA}-${this.propB}`
+  }
 }
 
 d('finished app')
