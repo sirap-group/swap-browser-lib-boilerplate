@@ -37,11 +37,13 @@ module.exports = function (config) {
 
     // list of files/patterns to load in the browser
     files: [
-      'src/**/*.js'
+      { pattern: 'src/lib/**/*.js', watched: false },
+      { pattern: 'src/tests/**/*.js', watched: false }
+      // { pattern: 'src/**/*.js', watched: true }
     ],
 
     // files to exclude
-    exclude: [],
+    // exclude: [],
 
     plugins: [
       karmaWebpack,
@@ -64,8 +66,8 @@ module.exports = function (config) {
 
     // prevent console spamming when running in Karma!
     webpackServer: {
-      // noInfo: true // prevent console spamming when running in Karma!
-      noInfo: false // prevent console spamming when running in Karma!
+      noInfo: true // prevent console spamming when running in Karma!
+      // noInfo: false
     },
 
     // web server port
@@ -79,8 +81,8 @@ module.exports = function (config) {
     logLevel: config.LOG_INFO,
 
     // toggle whether to watch files and rerun tests upon incurring changes
-    // autoWatch: false,
-    autoWatch: true,
+    autoWatch: false,
+    // autoWatch: true,
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
@@ -89,8 +91,8 @@ module.exports = function (config) {
     browsers: ['Chrome', 'ChromeHeadless', 'ChromeHeadlessDocker', 'Firefox', 'PhantomJS'],
 
     // if true, Karma runs tests once and exits
-    // singleRun: true,
-    singleRun: false,
+    singleRun: true,
+    // singleRun: false,
 
     customLaunchers: {
       ChromeHeadlessDocker: {
