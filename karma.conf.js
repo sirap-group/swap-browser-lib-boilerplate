@@ -24,7 +24,7 @@ const karmaMochaReporter = require('karma-mocha-reporter')
 const karmaSourceMapLoader = require('karma-sourcemap-loader')
 const karmaCoverage = require('karma-coverage')
 
-const webpackConfig = require('./webpack.config')
+const webpackConfig = require('./webpack.karma')
 
 module.exports = function (config) {
   config.set({
