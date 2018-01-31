@@ -17,7 +17,7 @@ process.chdir(workingDir)
  * @todo split it to several tasks for each kind of source files (src/lib, src/tests, src/docs, scripts, package.json)
  */
 
-gulp.task('watch:karma', function (done) {
+gulp.task('watch:bdd', function (done) {
   const files = [
     // 'package.json',
     // 'webpack.config.js',
@@ -57,4 +57,4 @@ gulp.task('watch:karma', function (done) {
   build(done => watch(files, options, onChange(done)))
 })
 
-gulp.task('default', ['watch:karma'])
+gulp.task('default', ['watch:bdd'])
