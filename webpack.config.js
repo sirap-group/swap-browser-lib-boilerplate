@@ -1,35 +1,22 @@
-// const path = require('path')
+const webpack = require('webpack')
+const path = require('path')
 
-module.exports = {
-  // entry: './src/lib/index.js',
-  // output: {
-  //   path: path.resolve(__dirname, 'dist'),
-  //   filename: 'demo-class.js'
-  // },
+const webpackConfig = require('./webpack.common')
 
-  target: 'web',
-
-  node: {
-    fs: 'empty'
+module.exports = Object.assign({
+  entry: {
+    'demo-class': './src/lib/index.js',
+    'demo-class.min': './src/lib/index.js'
   },
-
-  module: {
-    // Suppress warning from mocha: "Critical dependency: the request of a dependency is an expression"
-    // @see https://webpack.js.org/configuration/module/#module-contexts
-    exprContextCritical: false,
-
-    rules: [
-      {
-        test: /\.js$/,
-        exclude: /(node_modules)/,
-
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['env']
-          }
-        }
-      }
-    ]
-  }
-}
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: '[name].js'
+  },
+  plugins: [
+    new webpack.optimize.UglifyJsPlugin({
+      include: /\.min\.js$/,
+      minimize: true,
+      sourceMap: true
+    })
+  ]
+}, webpackConfig)
