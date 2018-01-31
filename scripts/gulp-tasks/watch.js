@@ -6,7 +6,7 @@ const shell = require('shelljs')
 const chalk = require('chalk')
 
 process.env.NODE_ENV = 'development'
-process.env.TESTING = 'BDD'
+process.env.TESTING = 'bdd'
 
 // Change working dir to come back to the project root
 const workingDir = path.resolve(path.join(__dirname, '../../'))
