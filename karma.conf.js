@@ -88,7 +88,7 @@ module.exports = function (config) {
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
     // see also for IE for linux on VMs: https://stackoverflow.com/questions/3701484/how-to-test-in-ie-with-linux
     // browsers: ['Chrome', 'ChromeCanary', 'ChromeHeadless', 'Firefox', 'Safari', 'PhantomJS', 'Opera', 'IE'],
-    browsers: ['Chrome', 'ChromeHeadless', 'ChromeHeadlessDocker', 'Firefox', 'PhantomJS'],
+    browsers: process.env.TESTING_MODE === 'BDD' ? ['PhantomJS'] : ['Chrome', 'ChromeHeadless', 'ChromeHeadlessDocker', 'Firefox', 'PhantomJS'],
 
     // if true, Karma runs tests once and exits
     singleRun: true,

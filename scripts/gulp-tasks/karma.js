@@ -3,6 +3,9 @@ const path = require('path')
 const gulp = require('gulp')
 const watch = require('gulp-watch')
 const shell = require('shelljs')
+const chalk = require('chalk')
+
+process.env.TESTING_MODE = 'BDD'
 
 // Change working dir to come back to the project root
 const workingDir = path.resolve(path.join(__dirname, '../../'))
