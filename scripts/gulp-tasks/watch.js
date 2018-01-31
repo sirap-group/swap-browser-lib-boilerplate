@@ -3,6 +3,10 @@ const path = require('path')
 const gulp = require('gulp')
 const watch = require('gulp-watch')
 const shell = require('shelljs')
+const chalk = require('chalk')
+
+process.env.NODE_ENV = 'development'
+process.env.TESTING = 'BDD'
 
 // Change working dir to come back to the project root
 const workingDir = path.resolve(path.join(__dirname, '../../'))
@@ -15,11 +19,15 @@ process.chdir(workingDir)
 
 gulp.task('watch:bdd', function (done) {
   const files = [
-    // 'package.json', // once task splitted
+    // 'package.json',
+    // 'webpack.config.js',
+    // 'karma.config.js',
+
     'src/lib/**/*.js',
     'src/tests/**/*.js',
     'src/assets/**/*.*'
-    // 'scripts/**/*.js' // once task splitted
+
+    // 'scripts/**/*.js'
   ]
 
   const options = {
@@ -33,13 +41,20 @@ gulp.task('watch:bdd', function (done) {
     read: false
   }
 
-  const build = cb => shell.exec('yarn pipeline:tests', cb)
+  const build = done => shell.exec('yarn karma start', err => {
+    if (err) {
+      console.error(chalk.red('Karma BDD testing FAILED !'))
+    } else {
+      console.log(chalk.green('Karma BDD testing SUCEED !'))
+    }
+    if (done) {
+      done()
+    }
+  })
 
-  const onChange = vinyl => {
-    build()
-  }
+  const onChange = done => vinyl => build(done)
 
-  build(() => watch(files, options, onChange))
+  build(done => watch(files, options, onChange(done)))
 })
 
 gulp.task('default', ['watch:bdd'])
