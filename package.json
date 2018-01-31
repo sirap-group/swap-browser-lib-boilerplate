@@ -34,7 +34,7 @@
     "build:lib": "yarn babel src/lib/ --out-dir dist/lib --source-maps",
     "build:tests": "yarn babel src/tests/ --out-dir dist/tests --source-maps",
     "build:docs": "echo WARNING: No documentation build available yet",
-    "test": "yarn mocha dist/tests/**/*.js",
+    "test": "yarn karma start",
     "tests": "yarn test",
     "travis": "yarn pipeline",
     "docs": "echo WARNING: No documentation to serve yet",
