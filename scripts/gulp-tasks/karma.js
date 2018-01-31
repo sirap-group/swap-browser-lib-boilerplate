@@ -40,13 +40,21 @@ gulp.task('watch:karma', function (done) {
     read: false
   }
 
-  const build = cb => shell.exec('yarn karma start', cb)
+  const build = done => shell.exec('yarn karma start', err => {
+    if (err) {
+      console.error(chalk.red('Karma BDD testing FAILED !'))
+    } else {
+      console.log(chalk.green('Karma BDD testing SUCEED !'))
+    }
+    if (done) {
+      console.log({done}, done.toString())
+      done()
+    }
+  })
 
-  const onChange = vinyl => {
-    build()
-  }
+  const onChange = done => vinyl => build(done)
 
-  build(() => watch(files, options, onChange))
+  build(done => watch(files, options, onChange(done)))
 })
 
 gulp.task('default', ['watch:karma'])
