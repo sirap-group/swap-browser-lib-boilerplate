@@ -22,8 +22,6 @@
     "yarn.lock"
   ],
   "scripts": {
-    "karma:bdd": "yarn gulp -f scripts/gulp-tasks/karma.js watch:karma",
-    "karma:testing": "yarn karma start",
     "bdd": "yarn gulp -f scripts/gulp-tasks/watch.js watch:bdd",
     "clear": "yarn rimraf build dist",
     "lint": "yarn lint:esnext",
