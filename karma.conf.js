@@ -108,6 +108,12 @@ module.exports = function (config) {
           '--no-sandbox' // needed to run test cases in docker
         ]
       }
+    },
+
+    webpackMiddleware: {
+      // webpack-dev-middleware configuration
+      // i. e.
+      stats: 'errors-only'
     }
   })
 }
