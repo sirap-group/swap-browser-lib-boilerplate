@@ -23,6 +23,7 @@ const karmaPhantomLauncher = require('karma-phantomjs-launcher')
 const karmaMochaReporter = require('karma-mocha-reporter')
 const karmaSourceMapLoader = require('karma-sourcemap-loader')
 const karmaCoverage = require('karma-coverage')
+const karmaCoverageIstanbulReporter = require('karma-coverage-istanbul-reporter')
 
 const webpackConfig = require('./webpack.karma')
 
@@ -55,9 +56,10 @@ module.exports = function (config) {
       karmaChromeLauncher,
       karmaFirefoxLauncher,
       karmaPhantomLauncher,
-      karmaMochaReporter,
       karmaSourceMapLoader,
-      karmaCoverage
+      karmaCoverage,
+      karmaMochaReporter,
+      karmaCoverageIstanbulReporter
     ],
 
     // preprocess matching files before serving them to the browser
