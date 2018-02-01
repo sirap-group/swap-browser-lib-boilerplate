@@ -46,7 +46,11 @@ module.exports = function (config) {
     // files to exclude
     // exclude: [],
 
-    reporters: ['progress', 'mocha', 'coverage', 'coverage-istanbul'],
+    reporters: ['progress', 'mocha', 'coverage-istanbul'],
+    coverageIstanbulReporter: {
+      reports: [ 'html', 'text-summary' ],
+      fixWebpackSourcePaths: true
+    },
 
     plugins: [
       karmaWebpack,
