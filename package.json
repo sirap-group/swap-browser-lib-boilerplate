@@ -119,6 +119,18 @@
         }
       ]
     ],
+    "env": {
+      "test": {
+        "plugins": [[
+          "istanbul",
+          {
+            "exclude": [
+              "**/*.test.js"
+            ]
+          }
+        ]]
+      }
+    },
     "plugins": [
       [
         "transform-runtime",
