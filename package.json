@@ -32,9 +32,9 @@
     "build:lib": "yarn babel src/lib/ --out-dir dist/lib --source-maps",
     "build:tests": "yarn babel src/tests/ --out-dir dist/tests --source-maps",
     "build:docs": "echo WARNING: No documentation build available yet",
-    "test": "yarn karma start",
+    "test": "NODE_ENV=test yarn karma start",
     "tests": "yarn test",
-    "travis": "yarn pipeline",
+    "travis": "yarn pipeline && istanbul-coveralls",
     "docs": "echo WARNING: No documentation to serve yet",
     "pipeline": "yarn pipeline:build && yarn tests",
     "pipeline:tests": "yarn pipeline:build:tests && yarn test",
@@ -122,14 +122,16 @@
     ],
     "env": {
       "test": {
-        "plugins": [[
-          "istanbul",
-          {
-            "exclude": [
-              "**/*.test.js"
-            ]
-          }
-        ]]
+        "plugins": [
+          [
+            "istanbul",
+            {
+              "exclude": [
+                "**/*.test.js"
+              ]
+            }
+          ]
+        ]
       }
     },
     "plugins": [
