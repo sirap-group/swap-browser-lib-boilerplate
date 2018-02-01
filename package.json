@@ -23,7 +23,7 @@
   ],
   "scripts": {
     "bdd": "yarn gulp -f scripts/gulp-tasks/watch.js watch:bdd",
-    "clear": "yarn rimraf build dist",
+    "clear": "yarn rimraf build dist coverage",
     "lint": "yarn lint:esnext",
     "lint:esnext": "yarn standard src/*.js src/**/*.js",
     "build": "yarn build:lib && yarn build:assets && yarn build:tests && yarn build:docs",
