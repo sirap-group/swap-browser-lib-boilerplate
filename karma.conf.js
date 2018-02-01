@@ -1,3 +1,5 @@
+const path = require('path')
+
 /**
  * See:
  * - https://github.com/xdissent/karma-chai
@@ -48,8 +50,49 @@ module.exports = function (config) {
 
     reporters: ['progress', 'mocha', 'coverage-istanbul'],
     coverageIstanbulReporter: {
-      reports: [ 'html', 'text-summary' ],
-      fixWebpackSourcePaths: true
+      // see valid options: https://github.com/istanbuljs/istanbuljs/blob/aae256fb8b9a3d19414dcf069c592e88712c32c6/packages/istanbul-api/lib/config.js#L33-L39
+      reports: [ 'html', 'lcovonly', 'text-summary' ],
+      // base output directory. If you include %browser% in the path it will be replaced with the karma browser name
+      dir: path.join(__dirname, 'coverage'),
+      // if using webpack and pre-loaders, work around webpack breaking the source path
+      fixWebpackSourcePaths: true,
+      // Combines coverage information from multiple browsers into one report rather than outputting a report
+      // for each browser.
+      combineBrowserReports: true,
+      // stop istanbul outputting messages like `File [${filename}] ignored, nothing could be mapped`
+      // skipFilesWithNoCoverage: true,
+      skipFilesWithNoCoverage: false,
+       // Most reporters accept additional config options. You can pass these through the `report-config` option
+      'report-config': {
+        // see valid options: https://github.com/istanbuljs/istanbuljs/blob/aae256fb8b9a3d19414dcf069c592e88712c32c6/packages/istanbul-reports/lib/html/index.js#L135-L137
+        html: {
+          // outputs the report in ./coverage/html
+          subdir: 'html'
+        }
+
+      },
+       // enforce percentage thresholds
+       // anything under these percentages will cause karma to fail with an exit code of 1 if not running in watch mode
+      thresholds: {
+        emitWarning: false, // set to `true` to not fail the test command when thresholds are not met
+        global: { // thresholds for all files
+          statements: 100,
+          lines: 100,
+          branches: 100,
+          functions: 100
+        },
+        each: { // thresholds per file
+          statements: 100,
+          lines: 100,
+          branches: 100,
+          functions: 100
+          // overrides: {
+          //   'baz/component/**/*.js': {
+          //     statements: 98
+          //   }
+          // }
+        }
+      }
     },
 
     plugins: [
