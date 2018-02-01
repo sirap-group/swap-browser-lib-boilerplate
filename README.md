@@ -11,6 +11,10 @@
     <img alt="Build Status" src="https://travis-ci.org/sirap-group/swap-browser-lib-boilerplate.svg?branch=master"/>
   </a>
 
+  <a href='https://coveralls.io/github/sirap-group/swap-browser-lib-boilerplate?branch=master'>
+    <img src='https://coveralls.io/repos/github/sirap-group/swap-browser-lib-boilerplate/badge.svg?branch=master' alt='Coverage Status' />
+  </a>
+
   <a href="https://www.npmjs.com/package/swap-browser-lib-boilerplate">
     <img src="https://img.shields.io/npm/dm/swap-browser-lib-boilerplate.svg" alt="npm downloads">
   </a>
