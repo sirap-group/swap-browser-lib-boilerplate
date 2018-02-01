@@ -35,6 +35,7 @@
     "test": "NODE_ENV=test yarn karma start",
     "tests": "yarn test",
     "travis": "yarn pipeline && istanbul-coveralls",
+    "serve:coverage": "yarn http-server -p 8888 coverage",
     "docs": "echo WARNING: No documentation to serve yet",
     "pipeline": "yarn pipeline:build && yarn tests",
     "pipeline:tests": "yarn pipeline:build:tests && yarn test",
