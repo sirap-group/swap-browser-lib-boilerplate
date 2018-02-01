@@ -9,8 +9,14 @@ webpackConfig.module.exprContextCritical = false
 webpackConfig.module.rules.push({
   // instrument only testing sources with Istanbul
   test: /\.js$/,
-  use: { loader: 'istanbul-instrumenter-loader' },
-  include: path.resolve('src/components/')
+  use: {
+    loader: 'istanbul-instrumenter-loader',
+    options: {
+      esModules: true
+    }
+  },
+  include: path.resolve('src'),
+  exclude: /node_modules|\.spec\.js$|\.test\.js$/
 })
 
 module.exports = webpackConfig
