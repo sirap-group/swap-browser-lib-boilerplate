@@ -4540,6 +4540,13 @@ karma-firefox-launcher@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/karma-firefox-launcher/-/karma-firefox-launcher-1.1.0.tgz#2c47030452f04531eb7d13d4fc7669630bb93339"
 
+karma-html-reporter@^0.2.7:
+  version "0.2.7"
+  resolved "https://registry.yarnpkg.com/karma-html-reporter/-/karma-html-reporter-0.2.7.tgz#fd73da9f1ac99fd5bafb309cf070942188e7ba63"
+  dependencies:
+    lodash "~2.2.0"
+    mu2 "~0.5.19"
+
 karma-ie-launcher@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/karma-ie-launcher/-/karma-ie-launcher-1.0.0.tgz#497986842c490190346cd89f5494ca9830c6d59c"
@@ -4911,6 +4918,10 @@ lodash@~1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-1.0.2.tgz#8f57560c83b59fc270bd3d561b690043430e2551"
 
+lodash@~2.2.0:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-2.2.1.tgz#ca935fd14ab3c0c872abacf198b9cda501440867"
+
 log-driver@1.2.5:
   version "1.2.5"
   resolved "https://registry.yarnpkg.com/log-driver/-/log-driver-1.2.5.tgz#7ae4ec257302fd790d557cb10c97100d857b0056"
@@ -5268,6 +5279,10 @@ ms@0.7.1:
 ms@2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.0.0.tgz#5608aeadfc00be6c2901df5f9861788de0d597c8"
+
+mu2@~0.5.19:
+  version "0.5.21"
+  resolved "https://registry.yarnpkg.com/mu2/-/mu2-0.5.21.tgz#888a8f0fd90eb1cfda9db81476f6e199cc9e58d3"
 
 multicast-dns-service-types@^1.1.0:
   version "1.1.0"
